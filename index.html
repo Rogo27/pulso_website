@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="sr-ME">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PULSO — Zajedno kucamo jače | Crna Gora</title>
+  <meta name="description" content="PULSO organizuje događaje širom Crne Gore, sa bazom u Podgorici. Social, Business, Sports, Creative i Youth PULSO." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Zajednički gradijent za puls liniju u logou -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="pulseGrad" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#00B862" />
+        <stop offset="0.55" stop-color="#1FEB8F" />
+        <stop offset="1" stop-color="#A6FCD6" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVIGACIJA ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="PULSO">
+        <span>PUL</span>
+        <svg class="brand__pulse" viewBox="0 0 100 80" aria-hidden="true">
+          <path d="M4 40 H28 L36 52 L50 6 L64 74 L74 40 H96" />
+        </svg>
+        <span>SO</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#o-nama" data-i18n="nav.about">O nama</a>
+        <a href="#grane" data-i18n="nav.services">Grane</a>
+        <a href="#dogadjaji" data-i18n="nav.events">Događaji</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="nav__actions">
+        <div class="lang" role="group" aria-label="Jezik / Language">
+          <button class="lang__btn is-active" data-lang="me">ME</button>
+          <button class="lang__btn" data-lang="en">EN</button>
+        </div>
+        <button class="nav__burger" id="burger" aria-label="Meni">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero section--dark">
+      <div class="hero__bg-line" aria-hidden="true">
+        <svg viewBox="0 0 1600 300" preserveAspectRatio="none">
+          <path class="hero__pulse" d="M0 150 H620 L660 210 L720 20 L790 280 L830 150 H1600" />
+        </svg>
+      </div>
+
+      <div class="container hero__content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Baza Podgorica · Događaji širom Crne Gore</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero.title1">Zajedno</span><br />
+          <span class="accent" data-i18n="hero.title2">kucamo jače.</span>
+        </h1>
+        <p class="hero__lead" data-i18n="hero.lead">
+          PULSO okuplja ljude kroz pet grana događaja — od festivala i druženja do biznisa, sporta, kulture i programa za mlade.
+        </p>
+        <div class="hero__cta">
+          <a href="#grane" class="btn btn--primary" data-i18n="hero.cta1">Upoznaj grane</a>
+          <a href="#kontakt" class="btn btn--ghost" data-i18n="hero.cta2">Organizuj sa nama</a>
+        </div>
+
+        <div class="tagline" aria-label="People, Energy, Movement">
+          <span class="tagline__line"></span>
+          <span class="tagline__words">People <i></i> Energy <i></i> Movement</span>
+          <span class="tagline__line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRAKA: GRADOVI ===== -->
+    <div class="cities" aria-label="Podgorica, Budva, Kotor, Herceg Novi, Nikšić, Žabljak, Kolašin, Ulcinj, Cetinje, Bar">
+      <div class="cities__track">
+        <div class="cities__group">
+          <span class="cities__item">Podgorica <small class="cities__badge" data-i18n="strip.base">baza</small></span>
+          <span class="cities__item">Budva</span>
+          <span class="cities__item">Kotor</span>
+          <span class="cities__item">Herceg Novi</span>
+          <span class="cities__item">Nikšić</span>
+          <span class="cities__item">Žabljak</span>
+          <span class="cities__item">Kolašin</span>
+          <span class="cities__item">Ulcinj</span>
+          <span class="cities__item">Cetinje</span>
+          <span class="cities__item">Bar</span>
+        </div>
+        <div class="cities__group" aria-hidden="true">
+          <span class="cities__item">Podgorica <small class="cities__badge" data-i18n="strip.base">baza</small></span>
+          <span class="cities__item">Budva</span>
+          <span class="cities__item">Kotor</span>
+          <span class="cities__item">Herceg Novi</span>
+          <span class="cities__item">Nikšić</span>
+          <span class="cities__item">Žabljak</span>
+          <span class="cities__item">Kolašin</span>
+          <span class="cities__item">Ulcinj</span>
+          <span class="cities__item">Cetinje</span>
+          <span class="cities__item">Bar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== O NAMA ===== -->
+    <section class="section" id="o-nama">
+      <div class="container about">
+        <div class="about__left reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">O nama</p>
+          <h2 class="section__title" data-i18n="about.title">Svaki dobar događaj ima svoj puls.</h2>
+        </div>
+        <div class="about__right reveal">
+          <p data-i18n="about.p1">
+            PULSO je organizacija sa bazom u Podgorici koja stvara događaje širom Crne Gore — u Budvi, Kotoru, na Žabljaku i svuda gdje ima ljudi spremnih da se pokrenu.
+          </p>
+          <p data-i18n="about.p2">
+            Kroz pet grana spajamo zabavu, posao, sport, kulturu i mlade. Brinemo o konceptu, lokaciji, produkciji i promociji, kako bi učesnici imali samo jedan zadatak: da budu dio pulsa.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__num">01</span>
+              <span class="stat__label" data-i18n="about.s1">Ljudi</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">02</span>
+              <span class="stat__label" data-i18n="about.s2">Energija</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">03</span>
+              <span class="stat__label" data-i18n="about.s3">Pokret</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GRANE ===== -->
+    <section class="section section--alt" id="grane">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal" data-i18n="services.eyebrow">Grane</p>
+            <h2 class="section__title reveal" data-i18n="services.title">Pet grana. Jedan puls.</h2>
+          </div>
+          <p class="section__note reveal" data-i18n="services.note">Svaka grana ima svoju publiku i svoj ritam, ali sve dijele istu energiju.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__num">01</span>
+            <h3 class="card__name">Social <span>Pulso</span></h3>
+            <p class="card__sub">Social Events &amp; Festivals</p>
+            <p data-i18n="services.c1p">Druženja, festivali, lifestyle i društvena okupljanja.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">02</span>
+            <h3 class="card__name">Business <span>Pulso</span></h3>
+            <p class="card__sub">Business &amp; Networking</p>
+            <p data-i18n="services.c2p">Poslovna takmičenja, networking i povezivanje kompanija.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">03</span>
+            <h3 class="card__name">Sports <span>Pulso</span></h3>
+            <p class="card__sub">Sports &amp; Challenges</p>
+            <p data-i18n="services.c3p">Sportski turniri, rekreativni izazovi i kompanijska takmičenja.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">04</span>
+            <h3 class="card__name">Creative <span>Pulso</span></h3>
+            <p class="card__sub">Creative &amp; Cultural Events</p>
+            <p data-i18n="services.c4p">Kreativni izazovi, umjetnost, kultura i originalni koncepti.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__num">05</span>
+            <h3 class="card__name">Youth <span>Pulso</span></h3>
+            <p class="card__sub">Youth &amp; Students</p>
+            <p data-i18n="services.c5p">Događaji za mlade i studente — takmičenja, radionice i druženja koja povezuju generaciju.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOGAĐAJI ===== -->
+    <section class="section section--dark" id="dogadjaji">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal" data-i18n="events.eyebrow">Događaji</p>
+            <h2 class="section__title reveal" data-i18n="events.title">Uskoro.</h2>
+          </div>
+          <p class="section__note reveal" data-i18n="events.note">Od Podgorice do primorja i sjevera — prvi PULSO datumi se najavljuju uskoro.</p>
+        </div>
+
+        <!-- Događaji se generišu iz script.js (niz "events") -->
+        <div class="events" id="eventsList"></div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAKT ===== -->
+    <section class="section" id="kontakt">
+      <div class="container contact">
+        <div class="contact__left reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kontakt</p>
+          <h2 class="section__title" data-i18n="contact.title">Imaš ideju? Hajde da je pokrenemo.</h2>
+          <p data-i18n="contact.text">Za saradnju, sponzorstva ili organizaciju događaja bilo gdje u Crnoj Gori — javi nam se.</p>
+
+          <ul class="contact__list">
+            <li><span data-i18n="contact.email">Email</span><a href="mailto:pulsomne1@gmail.com">pulsomne1@gmail.com</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/pulso.mne/" target="_blank" rel="noopener">@pulso.mne</a></li>
+            <li><span data-i18n="contact.location">Baza</span><p>Podgorica</p></li>
+            <li><span data-i18n="contact.area">Događaji</span><p data-i18n="contact.areaValue">Širom Crne Gore</p></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm">
+          <label>
+            <span data-i18n="form.name">Ime i prezime</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span data-i18n="form.email">Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span data-i18n="form.type">Grana</span>
+            <select name="type">
+              <option>Social PULSO</option>
+              <option>Business PULSO</option>
+              <option>Sports PULSO</option>
+              <option>Creative PULSO</option>
+              <option>Youth PULSO</option>
+              <option data-i18n="form.other">Saradnja / ostalo</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="form.message">Poruka</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary" data-i18n="form.send">Pošalji</button>
+          <p class="form__status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer section--dark">
+    <div class="container footer__inner">
+      <div>
+        <a href="#top" class="brand brand--small" aria-label="PULSO">
+          <span>PUL</span>
+          <svg class="brand__pulse" viewBox="0 0 100 80" aria-hidden="true">
+            <path d="M4 40 H28 L36 52 L50 6 L64 74 L74 40 H96" />
+          </svg>
+          <span>SO</span>
+        </a>
+        <p class="footer__tag">People · Energy · Movement</p>
+      </div>
+      <p>© <span id="year"></span> PULSO · <span data-i18n="footer.base">Podgorica — događaji širom Crne Gore.</span> <span data-i18n="footer.rights">Sva prava zadržana.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
