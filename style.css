@@ -674,6 +674,17 @@ img { max-width: 100%; display: block; }
 }
 
 .form .btn { margin-top: 6px; }
+.form .btn:disabled { opacity: 0.6; cursor: wait; transform: none; box-shadow: none; }
+
+.form__honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.form__status.is-error { color: #c0392b; }
 
 .form__status { font-size: 14px; font-weight: 600; color: var(--accent); min-height: 1em; }
 

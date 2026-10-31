@@ -251,7 +251,9 @@
             <span data-i18n="form.message">Poruka</span>
             <textarea name="message" rows="4" required></textarea>
           </label>
-          <button type="submit" class="btn btn--primary" data-i18n="form.send">Pošalji</button>
+          <!-- Zamka za spam botove — ljudi ovo polje ne vide -->
+          <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button type="submit" class="btn btn--primary" id="formBtn" data-i18n="form.send">Pošalji</button>
           <p class="form__status" id="formStatus" aria-live="polite"></p>
         </form>
       </div>

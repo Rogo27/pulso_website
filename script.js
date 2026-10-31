@@ -57,7 +57,9 @@ const translations = {
     "form.other": "Saradnja / ostalo",
     "form.message": "Poruka",
     "form.send": "Pošalji",
-    "form.success": "Hvala! Javićemo ti se uskoro.",
+    "form.success": "Hvala! Poruka je poslata — javićemo ti se uskoro.",
+    "form.sending": "Šaljem...",
+    "form.error": "Poruka nije poslata. Pokušaj ponovo ili nam piši na pulsomne1@gmail.com.",
 
     "footer.base": "Podgorica — događaji širom Crne Gore.",
     "footer.rights": "Sva prava zadržana.",
@@ -115,7 +117,9 @@ const translations = {
     "form.other": "Partnership / other",
     "form.message": "Message",
     "form.send": "Send",
-    "form.success": "Thanks! We'll get back to you soon.",
+    "form.success": "Thanks! Your message was sent — we'll get back to you soon.",
+    "form.sending": "Sending...",
+    "form.error": "Message not sent. Please try again or email us at pulsomne1@gmail.com.",
 
     "footer.base": "Podgorica — events across Montenegro.",
     "footer.rights": "All rights reserved.",
@@ -262,12 +266,55 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-/* Kontakt forma (za sada samo poruka — nema slanja na server) */
-document.getElementById("contactForm").addEventListener("submit", (e) => {
+/* Kontakt forma — šalje poruku na mail preko FormSubmit-a */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/pulsomne1@gmail.com";
+
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+const formBtn = document.getElementById("formBtn");
+
+contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  document.getElementById("formStatus").textContent =
-    translations[currentLang]["form.success"];
-  e.target.reset();
+  const dict = translations[currentLang];
+  const data = new FormData(contactForm);
+
+  // Ako je bot popunio skriveno polje — ne šalji ništa
+  if (data.get("_honey")) return;
+
+  formBtn.disabled = true;
+  formBtn.textContent = dict["form.sending"];
+  formStatus.classList.remove("is-error");
+  formStatus.textContent = "";
+
+  const payload = {
+    "Ime i prezime": data.get("name"),
+    email: data.get("email"), // FormSubmit ovo koristi kao "Reply-To"
+    Grana: data.get("type"),
+    Poruka: data.get("message"),
+    Jezik: currentLang.toUpperCase(),
+    _subject: `PULSO sajt — nova poruka (${data.get("type")})`,
+    _template: "table",
+  };
+
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const result = await res.json();
+
+    if (!res.ok || String(result.success) !== "true") throw new Error(result.message);
+
+    formStatus.textContent = dict["form.success"];
+    contactForm.reset();
+  } catch (err) {
+    formStatus.textContent = dict["form.error"];
+    formStatus.classList.add("is-error");
+  } finally {
+    formBtn.disabled = false;
+    formBtn.textContent = dict["form.send"];
+  }
 });
 
 /* Godina u footeru */
