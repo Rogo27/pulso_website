@@ -16,7 +16,7 @@ const translations = {
     "hero.eyebrow": "Baza Podgorica · Događaji širom Crne Gore",
     "hero.title1": "Zajedno",
     "hero.title2": "kucamo jače.",
-    "hero.lead": "PULSO okuplja ljude kroz pet grana događaja — od festivala i druženja do biznisa, sporta, kulture i programa za mlade.",
+    "hero.lead": "PULSO pretvara ideje u događaje i iskustva koja okupljaju ljude, podstiču povezivanje i stvaraju nove prilike.",
     "hero.cta1": "Upoznaj grane",
     "hero.cta2": "Organizuj sa nama",
 
@@ -24,20 +24,20 @@ const translations = {
 
     "about.eyebrow": "O nama",
     "about.title": "Svaki dobar događaj ima svoj puls.",
-    "about.p1": "PULSO je organizacija sa bazom u Podgorici koja stvara događaje širom Crne Gore — u Budvi, Kotoru, na Žabljaku i svuda gdje ima ljudi spremnih da se pokrenu.",
-    "about.p2": "Kroz pet grana spajamo zabavu, posao, sport, kulturu i mlade. Brinemo o konceptu, lokaciji, produkciji i promociji, kako bi učesnici imali samo jedan zadatak: da budu dio pulsa.",
+    "about.p1": "PULSO je organizacija sa sjedištem u Podgorici, posvećena stvaranju i realizaciji događaja i projekata širom Crne Gore.",
+    "about.p2": "Kroz različite oblasti djelovanja razvijamo originalne koncepte koji povezuju ljude, podstiču saradnju i pretvaraju dobre ideje u zajednička iskustva. Vjerujemo da događaji mogu biti mnogo više od okupljanja — mogu biti početak novih poznanstava, saradnji i inicijativa.",
     "about.s1": "Ljudi",
     "about.s2": "Energija",
     "about.s3": "Pokret",
 
     "services.eyebrow": "Grane",
     "services.title": "Pet grana. Jedan puls.",
-    "services.note": "Svaka grana ima svoju publiku i svoj ritam, ali sve dijele istu energiju.",
-    "services.c1p": "Druženja, festivali, lifestyle i društvena okupljanja.",
-    "services.c2p": "Poslovna takmičenja, networking i povezivanje kompanija.",
-    "services.c3p": "Sportski turniri, rekreativni izazovi i kompanijska takmičenja.",
-    "services.c4p": "Kreativni izazovi, umjetnost, kultura i originalni koncepti.",
-    "services.c5p": "Događaji za mlade i studente — takmičenja, radionice i druženja koja povezuju generaciju.",
+    "services.note": "Različita interesovanja, različite ideje i različiti načini povezivanja. Jedna zajednička energija.",
+    "services.c1p": "Festivali, tematski događaji i okupljanja koja stvaraju nova poznanstva i zajedničke trenutke.",
+    "services.c2p": "Poslovni susreti, networking događaji i takmičenja koja povezuju kompanije, profesionalce i nove ideje.",
+    "services.c3p": "Sportski događaji, timski izazovi i takmičenja koja podstiču aktivnost, saradnju i zajednički duh.",
+    "services.c4p": "Kreativni projekti, kulturni događaji i inovativni koncepti koji pomjeraju granice uobičajenog.",
+    "services.c5p": "Studentski festivali, takmičenja, radionice i inicijative koje okupljaju mlade i daju prostor njihovim idejama.",
 
     "events.eyebrow": "Događaji",
     "events.title": "Uskoro.",
@@ -45,7 +45,7 @@ const translations = {
 
     "contact.eyebrow": "Kontakt",
     "contact.title": "Imaš ideju? Hajde da je pokrenemo.",
-    "contact.text": "Za saradnju, sponzorstva ili organizaciju događaja bilo gdje u Crnoj Gori — javi nam se.",
+    "contact.text": "Imaš ideju, projekat ili prijedlog za saradnju? Otvoreni smo za nove koncepte, partnerstva i inicijative. Hajde da zajedno napravimo nešto vrijedno pažnje.",
     "contact.email": "Email",
     "contact.location": "Baza",
     "contact.area": "Događaji",
@@ -76,7 +76,7 @@ const translations = {
     "hero.eyebrow": "Based in Podgorica · Events across Montenegro",
     "hero.title1": "Together",
     "hero.title2": "we beat stronger.",
-    "hero.lead": "PULSO brings people together through five event branches — from festivals and social gatherings to business, sports, culture and youth programs.",
+    "hero.lead": "PULSO turns ideas into events and experiences that bring people together, encourage connection and create new opportunities.",
     "hero.cta1": "Explore branches",
     "hero.cta2": "Work with us",
 
@@ -84,20 +84,20 @@ const translations = {
 
     "about.eyebrow": "About us",
     "about.title": "Every great event has a pulse.",
-    "about.p1": "PULSO is a Podgorica-based organization creating events across Montenegro — in Budva, Kotor, Žabljak and anywhere people are ready to move.",
-    "about.p2": "Through five branches we connect fun, business, sport, culture and young people. We handle the concept, venue, production and promotion, so participants have just one job: to be part of the pulse.",
+    "about.p1": "PULSO is an organization based in Podgorica, dedicated to creating and delivering events and projects across Montenegro.",
+    "about.p2": "Across different areas of activity, we develop original concepts that connect people, encourage collaboration and turn good ideas into shared experiences. We believe events can be much more than gatherings — they can be the beginning of new friendships, collaborations and initiatives.",
     "about.s1": "People",
     "about.s2": "Energy",
     "about.s3": "Movement",
 
     "services.eyebrow": "Branches",
     "services.title": "Five branches. One pulse.",
-    "services.note": "Each branch has its own audience and rhythm, but they all share the same energy.",
-    "services.c1p": "Social gatherings, festivals, lifestyle and community events.",
-    "services.c2p": "Business competitions, networking and connecting companies.",
-    "services.c3p": "Sports tournaments, recreational challenges and corporate competitions.",
-    "services.c4p": "Creative challenges, art, culture and original concepts.",
-    "services.c5p": "Events for young people and students — competitions, workshops and meetups that connect a generation.",
+    "services.note": "Different interests, different ideas and different ways of connecting. One shared energy.",
+    "services.c1p": "Festivals, themed events and gatherings that create new friendships and shared moments.",
+    "services.c2p": "Business meetings, networking events and competitions that connect companies, professionals and new ideas.",
+    "services.c3p": "Sports events, team challenges and competitions that encourage activity, collaboration and team spirit.",
+    "services.c4p": "Creative projects, cultural events and innovative concepts that push the boundaries of the ordinary.",
+    "services.c5p": "Student festivals, competitions, workshops and initiatives that bring young people together and give space to their ideas.",
 
     "events.eyebrow": "Events",
     "events.title": "Coming soon.",
@@ -105,7 +105,7 @@ const translations = {
 
     "contact.eyebrow": "Contact",
     "contact.title": "Got an idea? Let's bring it to life.",
-    "contact.text": "For partnerships, sponsorships or events anywhere in Montenegro — get in touch.",
+    "contact.text": "Have an idea, a project or a proposal for collaboration? We're open to new concepts, partnerships and initiatives. Let's create something worth noticing together.",
     "contact.email": "Email",
     "contact.location": "Base",
     "contact.area": "Events",
@@ -132,6 +132,12 @@ const translations = {
    Ovo su PRIMJERI — zamijeni ih pravim događajima.
    date: "GGGG-MM-DD", branch: naziv grane (isti na oba jezika) */
 const events = [
+  {
+    date: null, // datum još nije poznat — prikazuje se "Uskoro"
+    title: { me: "Finally Free", en: "Finally Free" },
+    place: { me: "Naučno-tehnološki park · Podgorica", en: "Science & Technology Park · Podgorica" },
+    branch: "Youth",
+  },
   {
     date: "2026-12-05",
     title: { me: "PULSO Opening Night", en: "PULSO Opening Night" },
@@ -173,14 +179,20 @@ function renderEvents(lang) {
 
   list.innerHTML = events
     .map((ev) => {
-      const d = new Date(ev.date + "T00:00:00");
-      const day = String(d.getDate()).padStart(2, "0");
-      const month = months[d.getMonth()];
+      let day, monthLabel;
+      if (ev.date) {
+        const d = new Date(ev.date + "T00:00:00");
+        day = String(d.getDate()).padStart(2, "0");
+        monthLabel = `${months[d.getMonth()]} ${d.getFullYear()}`;
+      } else {
+        day = "??";
+        monthLabel = lang === "me" ? "Uskoro" : "Coming soon";
+      }
       return `
         <article class="event">
           <div class="event__date">
             <span class="event__day">${day}</span>
-            <span class="event__month">${month} ${d.getFullYear()}</span>
+            <span class="event__month">${monthLabel}</span>
           </div>
           <div>
             <h3 class="event__title">${ev.title[lang]}</h3>
@@ -309,7 +321,10 @@ contactForm.addEventListener("submit", async (e) => {
     formStatus.textContent = dict["form.success"];
     contactForm.reset();
   } catch (err) {
-    formStatus.textContent = dict["form.error"];
+    console.error("FormSubmit greška:", err.message);
+    formStatus.textContent = /activat/i.test(err.message || "")
+      ? "Forma još nije aktivirana — provjeri pulsomne1@gmail.com (i Spam) i klikni 'Activate Form'."
+      : dict["form.error"];
     formStatus.classList.add("is-error");
   } finally {
     formBtn.disabled = false;
