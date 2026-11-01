@@ -219,11 +219,45 @@
           <h2 class="section__title" data-i18n="contact.title">Imaš ideju? Hajde da je pokrenemo.</h2>
           <p data-i18n="contact.text">Imaš ideju, projekat ili prijedlog za saradnju? Otvoreni smo za nove koncepte, partnerstva i inicijative. Hajde da zajedno napravimo nešto vrijedno pažnje.</p>
 
-          <ul class="contact__list">
-            <li><span data-i18n="contact.email">Email</span><a href="mailto:pulsomne1@gmail.com">pulsomne1@gmail.com</a></li>
-            <li><span>Instagram</span><a href="https://www.instagram.com/pulso.mne/" target="_blank" rel="noopener">@pulso.mne</a></li>
-            <li><span data-i18n="contact.location">Baza</span><p>Podgorica</p></li>
-            <li><span data-i18n="contact.area">Događaji</span><p data-i18n="contact.areaValue">Širom Crne Gore</p></li>
+          <!-- Kartice: Instagram i Email (cijela kartica je klikabilna) -->
+          <div class="clinks">
+            <a class="clink clink--ig" href="https://www.instagram.com/pulso.mne/" target="_blank" rel="noopener">
+              <span class="clink__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.4" cy="6.6" r="1.1" class="fill" /></svg>
+              </span>
+              <span class="clink__body">
+                <span class="clink__label" data-i18n="contact.igLabel">Zaprati nas</span>
+                <span class="clink__value">@pulso.mne</span>
+              </span>
+              <span class="clink__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </span>
+            </a>
+
+            <a class="clink clink--mail" href="mailto:pulsomne1@gmail.com">
+              <span class="clink__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" /><path d="m4 7 8 6 8-6" /></svg>
+              </span>
+              <span class="clink__body">
+                <span class="clink__label" data-i18n="contact.mailLabel">Piši nam</span>
+                <span class="clink__value">pulsomne1<wbr>@gmail.com</span>
+              </span>
+              <span class="clink__arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" /></svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Baza i područje -->
+          <ul class="contact__meta">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+              <span><small data-i18n="contact.location">Baza</small>Podgorica</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5 4 4-10L16 12h5" /></svg>
+              <span><small data-i18n="contact.area">Događaji</small><span data-i18n="contact.areaValue">Širom Crne Gore</span></span>
+            </li>
           </ul>
         </div>
 
