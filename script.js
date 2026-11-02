@@ -220,8 +220,8 @@ function setLanguage(lang) {
   document.documentElement.lang = lang === "me" ? "sr-ME" : "en";
   document.title =
     lang === "me"
-      ? "PULSO — Zajedno kucamo jače | Crna Gora"
-      : "PULSO — Together we beat stronger | Montenegro";
+      ? "PULSO Events — Zajedno kucamo jače | Crna Gora"
+      : "PULSO Events — Together we beat stronger | Montenegro";
 
   document.querySelectorAll(".lang__btn").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.lang === lang);
