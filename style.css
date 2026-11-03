@@ -439,6 +439,26 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- O nama ---------- */
+/* Blaga pozadinska fotografija koja se samo nazire */
+#o-nama {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+#o-nama::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("about-bg.jpg") center / cover no-repeat;
+  opacity: 0.19;
+  /* blago se utapa u podlogu na vrhu i dnu */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
+  pointer-events: none;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
