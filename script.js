@@ -287,11 +287,51 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 /* Kontakt forma — šalje poruku na mail preko FormSubmit-a */
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/pulsomne1@gmail.com";
+const FORM_EMAIL = "pulsomne1@gmail.com";
+const FORM_AJAX = `https://formsubmit.co/ajax/${FORM_EMAIL}`;
+const FORM_CLASSIC = `https://formsubmit.co/${FORM_EMAIL}`;
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 const formBtn = document.getElementById("formBtn");
+
+// Polja koja stižu u mail
+function buildFields(data) {
+  return {
+    "Ime i prezime": data.get("name"),
+    email: data.get("email"), // FormSubmit ovo koristi kao "Reply-To"
+    Grana: data.get("type"),
+    Poruka: data.get("message"),
+    Jezik: currentLang.toUpperCase(),
+    _subject: `PULSO sajt — nova poruka (${data.get("type")})`,
+    _template: "table",
+    _captcha: "false",
+  };
+}
+
+// Rezervni način: klasično slanje forme (ne zavisi od CORS-a, uvijek radi)
+function classicSubmit(fields) {
+  const f = document.createElement("form");
+  f.method = "POST";
+  f.action = FORM_CLASSIC;
+  f.style.display = "none";
+  const all = { ...fields, _next: `${location.origin}/?poslato=1#kontakt` };
+  for (const [k, v] of Object.entries(all)) {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = k;
+    input.value = v ?? "";
+    f.appendChild(input);
+  }
+  document.body.appendChild(f);
+  f.submit();
+}
+
+// Poruka o uspjehu posle povratka sa klasičnog slanja
+if (new URLSearchParams(location.search).get("poslato") === "1") {
+  formStatus.textContent = translations[currentLang]["form.success"];
+  history.replaceState(null, "", `${location.pathname}#kontakt`);
+}
 
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -306,38 +346,46 @@ contactForm.addEventListener("submit", async (e) => {
   formStatus.classList.remove("is-error");
   formStatus.textContent = "";
 
-  const payload = {
-    "Ime i prezime": data.get("name"),
-    email: data.get("email"), // FormSubmit ovo koristi kao "Reply-To"
-    Grana: data.get("type"),
-    Poruka: data.get("message"),
-    Jezik: currentLang.toUpperCase(),
-    _subject: `PULSO sajt — nova poruka (${data.get("type")})`,
-    _template: "table",
-  };
+  const fields = buildFields(data);
+
+  // Jednostavan zahtjev (FormData, bez JSON zaglavlja) — pregledači ga ne blokiraju
+  const body = new FormData();
+  for (const [k, v] of Object.entries(fields)) body.append(k, v ?? "");
+
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12000);
 
   try {
-    const res = await fetch(FORM_ENDPOINT, {
+    const res = await fetch(FORM_AJAX, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(payload),
+      headers: { Accept: "application/json" },
+      body,
+      signal: controller.signal,
     });
     const result = await res.json();
 
-    if (!res.ok || String(result.success) !== "true") throw new Error(result.message);
+    if (String(result.success) !== "true") throw new Error(result.message || `HTTP ${res.status}`);
 
     formStatus.textContent = dict["form.success"];
     contactForm.reset();
   } catch (err) {
     console.error("FormSubmit greška:", err.message);
-    formStatus.textContent = /activat/i.test(err.message || "")
-      ? "Forma još nije aktivirana — provjeri pulsomne1@gmail.com (i Spam) i klikni 'Activate Form'."
-      : `${dict["form.error"]} (${err.message || "nepoznata greška"})`;
-    formStatus.classList.add("is-error");
+
+    if (/activat/i.test(err.message || "")) {
+      formStatus.textContent =
+        "Forma još nije aktivirana — provjeri pulsomne1@gmail.com (i Spam) i klikni 'Activate Form'.";
+      formStatus.classList.add("is-error");
+    } else {
+      // Mrežna greška ili spor server → pošalji klasično
+      classicSubmit(fields);
+      return;
+    }
   } finally {
-    formBtn.disabled = false;
-    formBtn.textContent = dict["form.send"];
+    clearTimeout(timer);
   }
+
+  formBtn.disabled = false;
+  formBtn.textContent = dict["form.send"];
 });
 
 /* Godina u footeru */
