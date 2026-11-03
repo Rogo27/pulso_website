@@ -452,7 +452,7 @@ img { max-width: 100%; display: block; }
   inset: 0;
   z-index: -1;
   background: url("about-bg.jpg") center / cover no-repeat;
-  opacity: 0.19;
+  opacity: 0.28;
   /* blago se utapa u podlogu na vrhu i dnu */
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
   mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 78%, transparent);
@@ -466,6 +466,9 @@ img { max-width: 100%; display: block; }
 }
 
 .about__right p { color: var(--muted); margin-bottom: 20px; }
+
+/* tamniji tekst da ostane čitljiv preko fotografije */
+#o-nama .about__right p { color: #3a383e; }
 
 .stats {
   display: grid;
