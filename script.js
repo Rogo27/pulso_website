@@ -289,7 +289,6 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 /* Kontakt forma — šalje poruku na mail preko FormSubmit-a */
 const FORM_EMAIL = "pulsomne1@gmail.com";
 const FORM_AJAX = `https://formsubmit.co/ajax/${FORM_EMAIL}`;
-const FORM_CLASSIC = `https://formsubmit.co/${FORM_EMAIL}`;
 
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
@@ -307,30 +306,6 @@ function buildFields(data) {
     _template: "table",
     _captcha: "false",
   };
-}
-
-// Rezervni način: klasično slanje forme (ne zavisi od CORS-a, uvijek radi)
-function classicSubmit(fields) {
-  const f = document.createElement("form");
-  f.method = "POST";
-  f.action = FORM_CLASSIC;
-  f.style.display = "none";
-  const all = { ...fields, _next: `${location.origin}/?poslato=1#kontakt` };
-  for (const [k, v] of Object.entries(all)) {
-    const input = document.createElement("input");
-    input.type = "hidden";
-    input.name = k;
-    input.value = v ?? "";
-    f.appendChild(input);
-  }
-  document.body.appendChild(f);
-  f.submit();
-}
-
-// Poruka o uspjehu posle povratka sa klasičnog slanja
-if (new URLSearchParams(location.search).get("poslato") === "1") {
-  formStatus.textContent = translations[currentLang]["form.success"];
-  history.replaceState(null, "", `${location.pathname}#kontakt`);
 }
 
 contactForm.addEventListener("submit", async (e) => {
@@ -376,9 +351,10 @@ contactForm.addEventListener("submit", async (e) => {
         "Forma još nije aktivirana — provjeri pulsomne1@gmail.com (i Spam) i klikni 'Activate Form'.";
       formStatus.classList.add("is-error");
     } else {
-      // Mrežna greška ili spor server → pošalji klasično
-      classicSubmit(fields);
-      return;
+      // FormSubmit ne odgovara (npr. njihov server ne radi) — posjetilac ostaje na sajtu
+      const reason = err.name === "AbortError" ? "server ne odgovara" : err.message;
+      formStatus.textContent = `${dict["form.error"]} (${reason || "nepoznata greška"})`;
+      formStatus.classList.add("is-error");
     }
   } finally {
     clearTimeout(timer);
