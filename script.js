@@ -24,8 +24,8 @@ const translations = {
 
     "about.eyebrow": "O nama",
     "about.title": "Svaki dobar događaj ima svoj puls.",
-    "about.p1": "PULSO je organizacija sa sjedištem u Podgorici, posvećena stvaranju i realizaciji događaja i projekata širom Crne Gore.",
-    "about.p2": "Kroz različite oblasti djelovanja razvijamo originalne koncepte koji povezuju ljude, podstiču saradnju i pretvaraju dobre ideje u zajednička iskustva. Vjerujemo da događaji mogu biti mnogo više od okupljanja — mogu biti početak novih poznanstava, saradnji i inicijativa.",
+    "about.p1": "PULSO je organizacija koja okuplja ljude, ideje i energiju oko događaja i projekata koji pomjeraju stvari naprijed. Osmislili smo PULSO sa jednom idejom — da stvaramo nešto više od običnih okupljanja.",
+    "about.p2": "Od prvog koncepta do posljednjeg detalja, sami osmišljavamo, pokrećemo i realizujemo događaje, festivale, takmičenja i iskustva pod brendom PULSO. Vjerujemo u snagu zajedništva, energiju ljudi i ideje koje postaju stvarnost. Jer svaki pokret počinje jednim impulsom.",
     "about.s1": "Ljudi",
     "about.s2": "Energija",
     "about.s3": "Pokret",
@@ -38,6 +38,8 @@ const translations = {
     "services.c3p": "Sportski događaji, timski izazovi i takmičenja koja podstiču aktivnost, saradnju i zajednički duh.",
     "services.c4p": "Kreativni projekti, kulturni događaji i inovativni koncepti koji pomjeraju granice uobičajenog.",
     "services.c5p": "Studentski festivali, takmičenja, radionice i inicijative koje okupljaju mlade i daju prostor njihovim idejama.",
+    "services.extraLabel": "Dodatno · Za kompanije i brendove",
+    "services.c6p": "Od ideje do realizacije, preuzimamo kompletnu organizaciju događaja za kompanije, brendove i druge klijente – uključujući planiranje, osmišljavanje koncepta, logistiku, produkciju i koordinaciju svih detalja.",
 
     "events.eyebrow": "Događaji",
     "events.title": "Uskoro.",
@@ -45,7 +47,7 @@ const translations = {
 
     "contact.eyebrow": "Kontakt",
     "contact.title": "Imaš ideju? Hajde da je pokrenemo.",
-    "contact.text": "Imaš ideju, projekat ili prijedlog za saradnju? Otvoreni smo za nove koncepte, partnerstva i inicijative. Hajde da zajedno napravimo nešto vrijedno pažnje.",
+    "contact.text": "Imaš ideju, projekat ili prijedlog za saradnju? Želiš da organizuješ događaj za svoju kompaniju ili brend? Otvoreni smo za nove koncepte, partnerstva i inicijative. Hajde da zajedno napravimo nešto vrijedno pažnje.",
     "contact.email": "Email",
     "contact.igLabel": "Zaprati nas",
     "contact.mailLabel": "Piši nam",
@@ -86,8 +88,8 @@ const translations = {
 
     "about.eyebrow": "About us",
     "about.title": "Every great event has a pulse.",
-    "about.p1": "PULSO is an organization based in Podgorica, dedicated to creating and delivering events and projects across Montenegro.",
-    "about.p2": "Across different areas of activity, we develop original concepts that connect people, encourage collaboration and turn good ideas into shared experiences. We believe events can be much more than gatherings — they can be the beginning of new friendships, collaborations and initiatives.",
+    "about.p1": "PULSO is an organization that brings people, ideas and energy together around events and projects that move things forward. We created PULSO with one idea — to build something more than ordinary gatherings.",
+    "about.p2": "From the first concept to the final detail, we design, launch and deliver our own events, festivals, competitions and experiences under the PULSO brand. We believe in the power of togetherness, the energy of people and ideas that become reality. Because every movement starts with a single impulse.",
     "about.s1": "People",
     "about.s2": "Energy",
     "about.s3": "Movement",
@@ -100,6 +102,8 @@ const translations = {
     "services.c3p": "Sports events, team challenges and competitions that encourage activity, collaboration and team spirit.",
     "services.c4p": "Creative projects, cultural events and innovative concepts that push the boundaries of the ordinary.",
     "services.c5p": "Student festivals, competitions, workshops and initiatives that bring young people together and give space to their ideas.",
+    "services.extraLabel": "Additionally · For companies & brands",
+    "services.c6p": "From idea to execution, we take on the complete organization of events for companies, brands and other clients — including planning, concept development, logistics, production and coordination of every detail.",
 
     "events.eyebrow": "Events",
     "events.title": "Coming soon.",
@@ -107,7 +111,7 @@ const translations = {
 
     "contact.eyebrow": "Contact",
     "contact.title": "Got an idea? Let's bring it to life.",
-    "contact.text": "Have an idea, a project or a proposal for collaboration? We're open to new concepts, partnerships and initiatives. Let's create something worth noticing together.",
+    "contact.text": "Have an idea, a project or a proposal for collaboration? Want to organize an event for your company or brand? We're open to new concepts, partnerships and initiatives. Let's create something worth noticing together.",
     "contact.email": "Email",
     "contact.igLabel": "Follow us",
     "contact.mailLabel": "Email us",

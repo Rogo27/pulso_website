@@ -511,6 +511,11 @@ img { max-width: 100%; display: block; }
 
 .card:hover::before { width: 100%; }
 
+/* Dodatna grana (Events by PULSO) — odvojena od pet glavnih grana */
+.cards__label { margin: 48px 0 18px; }
+
+.cards .card--wide { grid-column: 1 / -1; }
+
 .card__num {
   font-family: var(--font-logo);
   font-size: 15px;
