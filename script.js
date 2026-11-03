@@ -332,7 +332,7 @@ contactForm.addEventListener("submit", async (e) => {
     console.error("FormSubmit greška:", err.message);
     formStatus.textContent = /activat/i.test(err.message || "")
       ? "Forma još nije aktivirana — provjeri pulsomne1@gmail.com (i Spam) i klikni 'Activate Form'."
-      : dict["form.error"];
+      : `${dict["form.error"]} (${err.message || "nepoznata greška"})`;
     formStatus.classList.add("is-error");
   } finally {
     formBtn.disabled = false;
