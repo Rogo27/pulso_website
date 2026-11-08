@@ -13,7 +13,7 @@ const translations = {
     "nav.events": "Događaji",
     "nav.contact": "Kontakt",
 
-    "hero.eyebrow": "Baza Podgorica · Događaji širom Crne Gore",
+    "hero.eyebrow": "PULSO Events · Podgorica · Događaji širom Crne Gore",
     "hero.title1": "Zajedno",
     "hero.title2": "kucamo jače.",
     "hero.lead": "PULSO pretvara ideje u događaje i iskustva koja okupljaju ljude, podstiču povezivanje i stvaraju nove prilike.",
@@ -77,7 +77,7 @@ const translations = {
     "nav.events": "Events",
     "nav.contact": "Contact",
 
-    "hero.eyebrow": "Based in Podgorica · Events across Montenegro",
+    "hero.eyebrow": "PULSO Events · Podgorica · Events across Montenegro",
     "hero.title1": "Together",
     "hero.title2": "we beat stronger.",
     "hero.lead": "PULSO turns ideas into events and experiences that bring people together, encourage connection and create new opportunities.",
@@ -143,7 +143,7 @@ const events = [
   {
     date: null, // datum još nije poznat — prikazuje se "Uskoro"
     title: { me: "Finally Free", en: "Finally Free" },
-    place: { me: "Naučno-tehnološki park · Podgorica", en: "Science & Technology Park · Podgorica" },
+    place: { me: "Sportski i kulturni centar Univerziteta Crne Gore · Podgorica", en: "University of Montenegro Sports & Culture Centre · Podgorica" },
     branch: "Youth",
   },
   {

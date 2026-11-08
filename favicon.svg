@@ -6,8 +6,8 @@
       <stop offset="1" stop-color="#A6FCD6"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="14" fill="#111113"/>
-  <path d="M7 33 H19 L23 40 L31 12 L39 52 L44 33 H57"
-        fill="none" stroke="url(#g)" stroke-width="6.5"
+  <rect width="64" height="64" fill="#111113"/>
+  <path d="M10 33 H20.5 L24 39.5 L31.5 14 L39 50 L43.5 33 H54"
+        fill="none" stroke="url(#g)" stroke-width="6"
         stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
